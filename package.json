@@ -23,7 +23,7 @@
     "dev": "run-s watch",
     "prebuild": "run-s clean",
     "prewatch": "run-s clean",
-    "clean": "del packages/*/build",
+    "clean": "del-cli packages/*/build",
     "pretest": "run-s build",
     "test": "run-p test:*",
     "test:unit": "lerna run test",
