@@ -598,6 +598,7 @@ export class NotionAPI {
 
     return ky
       .post(url, {
+        credentials: kyOptions?.credentials, // See: https://github.com/developit/redaxios/issues/64 and https://github.com/sindresorhus/ky/issues/366
         ...this._kyOptions,
         ...kyOptions,
         json: body,
